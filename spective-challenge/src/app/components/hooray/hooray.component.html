@@ -1,0 +1,17 @@
+<button nbButton
+	(click)="goBack()"
+	status="primary">Go Back</button>
+<nb-flip-card>
+	<nb-card-front>
+		<nb-card accent="danger">
+			<span>Hello {{ name }}!</span>
+			<span>Your favorite food is...</span>
+		</nb-card>
+	</nb-card-front>
+	<nb-card-back>
+		<nb-card>
+			<span>{{ favoriteFood }}</span>
+			<span>I love {{ favoriteFood }}!</span>
+		</nb-card>
+	</nb-card-back>
+</nb-flip-card>

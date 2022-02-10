@@ -6,6 +6,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AppRoutingModule } from './app-routing.module';
+import { MainModule } from './components/main/main.module';
+import { HoorayModule } from './components/hooray/hooray.module';
+
+const NEBULAR_MODULES = [
+  NbThemeModule.forRoot({ name: 'default' }),
+  NbLayoutModule,
+  NbEvaIconsModule,
+];
 
 @NgModule({
   declarations: [
@@ -14,12 +22,12 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NbThemeModule.forRoot({ name: 'default' }),
-    NbLayoutModule,
-    NbEvaIconsModule,
-    AppRoutingModule
+    NEBULAR_MODULES,
+    AppRoutingModule,
+
+    MainModule,
+    HoorayModule,
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

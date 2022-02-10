@@ -1,0 +1,24 @@
+<nb-card size="small" status="primary">
+	<nb-card-header>Please enter your details</nb-card-header>
+	<nb-card-body>
+		<div class="input-container">
+			<form [formGroup]="form">
+				<input nbInput
+					placeholder="Name"
+					type="text"
+					status="primary"
+					formControlName="name">
+				<input nbInput
+					placeholder="Favorite food"
+					type="text"
+					status="primary"
+					formControlName="favoriteFood">
+			</form>
+		</div>
+	</nb-card-body>
+	<nb-card-footer>
+		<button nbButton
+			(click)="submit()"
+			status="primary">Submit</button>
+	</nb-card-footer>
+</nb-card>
